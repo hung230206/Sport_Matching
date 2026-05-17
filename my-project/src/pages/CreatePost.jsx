@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import './CreatePost.css';
 
 // Import các component con vừa tách
-import PitchTypeSection from '../components/PitchTypeSection';
-import TimePickerSection from '../components/TimePickerSection';
-import LocationSection from '../components/LocationSection';
-import RequirementsSection from '../components/RequirementsSection';
+import PitchTypeSection from '../Components/PitchTypeSection';
+import TimePickerSection from '../Components/TimePickerSection';
+import LocationSection from '../Components/LocationSection';
+import RequirementsSection from '../Components/RequirementsSection';
 
 const CreatePost = () => {
     const [selectedPitch, setSelectedPitch] = useState(5);
