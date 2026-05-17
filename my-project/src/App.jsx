@@ -1,11 +1,10 @@
-import { useState } from 'react'
-import './App.css'
-import Header from './components/Header';
+import CreatePost from './pages/CreatePost';
 
 function App() {
   return (
-    <Header />
-  )
+    <div className="App">
+      <CreatePost />
+    </div>
+  );
 }
-
 export default App;
