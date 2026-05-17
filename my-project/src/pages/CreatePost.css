@@ -1,0 +1,533 @@
+/* Container tổng thể của trang */
+.create-post-container {
+  max-width: 390px; /* Lưu ý: Đã sửa từ 958px về 480px để chuẩn giao diện di động (mobile view) */
+  margin: 0 auto;
+  background-color: var(--bg-app); /* Sài var màu nền app xám nhẹ */
+  min-height: 100vh;
+  padding: 10px 15px;
+}
+
+/* Flexbox để dàn hàng ngang cho nút Back và Tiêu đề */
+.header-nav {
+  display: flex;
+  align-items: flex-start; /* Để nút Back nằm ngang hàng với dòng tiêu đề đầu tiên */
+  padding: 15px 0 20px 0;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: var(--text-body); /* Sài var màu chữ body */
+  cursor: pointer;
+  padding: 5px 10px 5px 0;
+}
+
+/* Group này chiếm hết không gian còn lại và căn giữa */
+.header-title-group {
+  flex: 1;
+  text-align: center;
+  margin-right: 30px; /* Tạo khoảng trống bằng nút Back bên trái để h1 nằm chính giữa màn hình */
+}
+
+.header-title-group h1 {
+  font-size: var(--fs-h1); /* Sài var cỡ chữ H1 */
+  font-weight: 600;
+  color: var(--text-main); /* Sài var màu chữ tiêu đề đen */
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.header-title-group p {
+  font-size: var(--fs-sub); /* Sài var cỡ chữ phụ đề (13px) */
+  color: var(--text-muted); /* Sài var màu chữ xám phụ đề */
+  font-weight: 400;
+  text-align: center;
+  max-width: 200px; 
+  display: block;
+  
+  /* CĂN GIỮ VÀ KHOẢNG CÁCH TRÊN (20px cho thoáng) */
+  margin: 20px auto 0 auto; 
+  
+  /* KHOẢNG CÁCH CHỮ VÀ DÒNG */
+  line-height: 1.6;
+  word-spacing: 1.5px; /* Đã fix lỗi khoảng trắng "1.5 px" */
+  letter-spacing: 0.5px;
+}
+/* --- PHẦN 2: KHỐI CHỌN SÂN --- */
+
+/* Khối bao bọc màu trắng (Card) */
+.section-card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-card);
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-main);
+}
+
+/* Tiêu đề mục (H2) */
+.section-title {
+  font-size: var(--fs-h2);
+  color: var(--text-main);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Icon màu xanh đi kèm tiêu đề */
+.icon-green {
+  color: var(--primary-color);
+  font-size: 14px;
+}
+
+/* Khung chứa các nút bấm dàn hàng ngang */
+.pitch-options {
+  display: flex;
+  gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+/* Thao tác chung cho các nút chọn sân */
+.pitch-btn {
+  flex: 1; /* Chia đều 3 nút bằng nhau khít màn hình */
+  padding: 10px 0;
+  font-size: var(--fs-body);
+  font-weight: 500;
+  color: var(--text-body);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-btn);
+  cursor: pointer;
+  transition: all 0.2s ease; /* Hiệu ứng mượt mà khi đổi màu */
+  text-align: center;
+}
+
+/* Trạng thái nút KHI ĐƯỢC CHỌN (Active) */
+.pitch-btn.active {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background-color: var(--primary-light); /* Nền xanh lá siêu nhạt */
+  font-weight: 600;
+}
+/* --- PHẦN 3: KHỐI CHỌN THỜI GIAN --- */
+
+.time-picker-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Khoảng cách giữa dòng ngày và dòng giờ */
+}
+
+.picker-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Ép dòng chọn ngày chiếm 100% chiều rộng */
+.picker-item.full-width {
+  width: 100%;
+}
+
+/* Hàng ngang chứa Giờ và Thời lượng - Chia đôi bằng Flexbox */
+.picker-row-split {
+  display: flex;
+  gap: 12px; /* Khoảng cách giữa ô Giờ và ô Chọn Phút */
+}
+
+.picker-row-split .picker-item {
+  flex: 1; /* Chia đều 50% - 50% cho 2 ô */
+}
+
+.picker-item label {
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: var(--fs-sub);
+}
+
+.input-with-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+/* CSS chung cho ô Ngày, Giờ và Dropdown */
+.time-input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: var(--fs-body);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-btn);
+  color: var(--text-body);
+  background-color: var(--bg-card);
+  font-family: inherit;
+  outline: none;
+}
+
+.time-input:focus {
+  border-color: var(--primary-color);
+}
+
+/* Custom riêng cho ô Select Dropdown để có mũi tên đẹp */
+.select-input {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='%238e8e93' d='M0 0h10L5 6z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 30px;
+  -webkit-appearance: none; /* Ẩn mũi tên mặc định xấu xí của trình duyệt */
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Badge hiển thị Thứ */
+.weekday-badge {
+  padding: 9px 12px;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  font-size: var(--fs-sub);
+  font-weight: 600;
+  border-radius: var(--radius-btn);
+  border: 1px dashed var(--primary-color);
+  white-space: nowrap;
+}
+/* --- PHẦN 4: KHỐI SỐ LƯỢNG NGƯỜI CẦN --- */
+
+/* Khung bo tròn lớn chứa cả nút và ô nhập */
+.stepper-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-btn); /* Sài var bo góc 10px giống ô nhập khác */
+  padding: 6px 12px;
+  background-color: var(--bg-card);
+}
+
+/* Ô nhập số ở chính giữa */
+.stepper-input {
+  flex: 1;
+  border: none;
+  background: none;
+  text-align: center;
+  font-size: var(--fs-body);
+  color: var(--text-body);
+  outline: none;
+  font-family: inherit;
+}
+
+/* Ẩn 2 mũi tên tăng giảm mặc định cực xấu của ô input type="number" */
+.stepper-input::-webkit-outer-spin-button,
+.stepper-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.stepper-input {
+  -moz-appearance: textfield; /* Cho trình duyệt Firefox */
+}
+
+/* Placeholder chữ màu xám nhạt như mẫu */
+.stepper-input::placeholder {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* Hai nút tròn tròn (-) và (+) ở hai bên */
+.stepper-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%; /* Ép thành hình tròn xoe */
+  border: none;
+  background-color: #f1f3f5; /* Màu nền xám nhẹ của nút giống mẫu */
+  color: #495057; /* Màu của dấu - và + */
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.stepper-btn:hover:not(:disabled) {
+  background-color: #e9ecef;
+}
+
+/* Khi nút trừ bị vô hiệu hóa (bằng 0) thì làm mờ đi */
+.stepper-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+/* ==========================================================================
+   --- PHẦN 5: KHỐI ĐỊA ĐIỂM (KIỂU GỘP CHUNG MỘT HỘP VIỀN) ---
+   ========================================================================== */
+
+/* Hộp bọc lớn bao quanh cả ô nhập và nút GPS - đóng vai trò làm khung viền chính */
+.location-flex-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-btn); /* Sử dụng biến bo góc chung của dự án */
+  background-color: var(--bg-card);
+  padding: 4px 6px 4px 14px; /* Padding trái rộng để đẩy chữ, padding phải nhỏ để nút GPS áp sát */
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+/* Hiệu ứng đổi màu viền của CẢ HỘP khi người dùng đang click nhập chữ */
+.location-flex-row:focus-within {
+  border-color: var(--primary-color); /* Toàn bộ khung viền đổi sang màu xanh lá */
+}
+
+/* Ô nhập địa điểm nằm lọt lòng bên trong hộp, xả bỏ hết viền riêng */
+.location-pure-input {
+  flex: 1; /* Chiếm trọn không gian trống bên trái */
+  border: none;
+  background: transparent;
+  padding: 8px 0; /* Chỉ padding trên dưới, không làm nở chiều rộng */
+  font-size: var(--fs-body);
+  color: var(--text-body);
+  outline: none; /* Khử viền đen mặc định của trình duyệt */
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+/* Chữ gợi ý mờ mờ màu xám nhạt */
+.location-pure-input::placeholder {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* Nút GPS nằm lọt lòng bên phải, không cần viền riêng nữa */
+.gps-standalone-btn {
+  width: 36px;
+  height: 36px;
+  border: none; /* Xóa viền để hòa mình vào hộp chung */
+  background: transparent; /* Nền trong suốt */
+  color: #495057; /* Màu xám đậm cho icon nhắm mục tiêu */
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0; /* Khóa cứng kích thước để không bị ô chữ ép dẹp */
+  transition: color 0.2s ease;
+}
+
+/* Hiệu ứng đổi màu icon khi di chuột (hover) vào nút GPS */
+.gps-standalone-btn:hover {
+  color: var(--primary-color); /* Icon chuyển màu xanh lá */
+}
+/* ==========================================================================
+   --- PHẦN 6: KHỐI YÊU CẦU THÊM ---
+   ========================================================================== */
+
+/* Khung lớn bao trọn cả 3 dòng (Độ tuổi, Trình độ, Giới tính) */
+.requirements-group {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-btn); /* Bo góc đồng bộ với toàn bộ form */
+  background-color: var(--bg-card);
+  overflow: hidden; /* Giữ các góc dòng con không bị tràn ra khỏi viền bo */
+  box-sizing: border-box;
+}
+
+/* Từng dòng hàng ngang bên trong khung */
+.req-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Đẩy chữ sang trái, ô nhập sang phải */
+  padding: 14px 16px;
+  border-bottom: 1px solid #f1f3f5; /* Đường kẻ mờ phân cách giữa các dòng */
+  box-sizing: border-box;
+}
+
+/* Khử đường kẻ cho dòng cuối cùng (Giới tính) để tránh bị lem viền */
+.req-row.no-border {
+  border-bottom: none;
+}
+
+/* Vế bên trái: Khối chứa Icon + Tiêu đề dòng */
+.req-label-side {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: var(--fs-body);
+  color: var(--text-body);
+  font-weight: 500;
+}
+
+/* Khóa cứng độ rộng icon để các chữ "Độ tuổi", "Trình độ" xếp thẳng hàng dọc */
+.req-label-side i {
+  font-size: 18px;
+  width: 20px;
+  text-align: center;
+}
+
+/* Vế bên phải cho hàng nút bấm (Giới tính) */
+.req-input-side {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 70%;
+}
+
+/* --- Xử lý ô chọn Select (Độ tuổi & Trình độ) --- */
+
+/* Hộp bọc thẻ select để làm điểm tựa định vị cho mũi tên custom */
+.req-select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Thẻ select được gọt giũa sạch sẽ viền, căn chữ áp sát lề phải */
+.req-select {
+  border: none;
+  background: transparent;
+  font-size: var(--fs-body);
+  color: var(--text-body);
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding-right: 20px; /* Chừa khoảng trống vừa đủ cho mũi tên đi kèm */
+  text-align: right;
+  -webkit-appearance: none; /* Ẩn mũi tên mặc định thô kệch trên Chrome/Safari */
+  -moz-appearance: none;    /* Ẩn mũi tên trên Firefox */
+  appearance: none;         /* Ẩn mũi tên mặc định hệ thống */
+}
+
+/* Mẹo biến chữ "Chọn độ tuổi / Chọn trình độ" thành màu xám nhạt khi chưa có giá trị */
+.req-select:has(option[value=""]:checked) {
+  color: var(--text-muted);
+}
+
+/* Mũi tên góc phải nhỏ gọn đúng chuẩn UI cao cấp */
+.select-arrow {
+  position: absolute;
+  right: 0;
+  font-size: 11px;
+  color: var(--text-muted);
+  pointer-events: none; /* Xuyên thấu lượt click chuột để không cản trở mở select */
+}
+
+/* --- Xử lý nút bấm dạng viên thuốc (Giới tính) --- */
+
+/* Thanh chứa các viên thuốc giới tính */
+.gender-tabs {
+  display: flex;
+  gap: 8px; /* Khoảng cách giữa các nút */
+}
+
+/* Style nút viên thuốc trạng thái bình thường */
+.gender-btn {
+  padding: 6px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 20px; /* Bo tròn tuyệt đối thành hình viên thuốc */
+  background-color: var(--bg-card);
+  color: var(--text-body);
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Khi viên thuốc được kích hoạt (Active) */
+.gender-btn.active {
+  border-color: var(--primary-color); /* Lên viền xanh lá đậm đà */
+  color: var(--primary-color);        /* Chữ chuyển sang xanh lá */
+  font-weight: 500;
+  background-color: rgba(39, 174, 96, 0.02); /* Hửng một chút nền xanh cực nhẹ */
+}
+/* ==========================================================================
+   --- PHẦN 7: KHỐI SỐ ĐIỆN THOẠI LIÊN HỆ ---
+   ========================================================================== */
+
+/* Ô nhập số điện thoại độc lập */
+.phone-single-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: var(--fs-body);
+  color: var(--text-body);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-btn); /* Sử dụng biến bo góc chung của dự án */
+  background-color: var(--bg-card);
+  outline: none;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+/* Hiệu ứng sáng viền xanh lá khi người dùng click vào ô để nhập số */
+.phone-single-input:focus {
+  border-color: var(--primary-color);
+}
+
+/* Định dạng màu chữ gợi ý */
+.phone-single-input::placeholder {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* Dòng ghi chú bảo mật (Chứa icon ổ khóa + chữ) */
+.phone-privacy-note {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Khoảng cách giữa ổ khóa và chữ */
+  margin-top: 10px; /* Khoảng cách vừa phải so với đáy của ô input */
+  font-size: 13px; /* Chữ nhỏ hơn chữ thân một chút */
+  color: var(--text-muted); /* Màu chữ xám nhạt */
+}
+
+/* Định vị icon ổ khóa nhỏ gọn */
+.phone-privacy-note i {
+  font-size: 12px;
+}
+/* ==========================================================================
+   --- PHẦN 8: NÚT ĐĂNG BÀI (PHẦN CUỐI CÙNG) ---
+   ========================================================================== */
+
+/* Khung bọc ngoài nút bấm để tạo khoảng cách với khối số điện thoại phía trên */
+.submit-section {
+  margin-top: 30px;
+  margin-bottom: 20px; /* Khoảng cách an toàn với đáy màn hình */
+  padding: 0 4px;      /* Căn chỉnh lề nhẹ hai bên cho cân đối */
+  box-sizing: border-box;
+}
+
+/* Định dạng nút Đăng bài chính */
+.submit-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;                  /* Khoảng cách giữa icon và chữ "Đăng bài" */
+  background-color: var(--primary-color); /* Màu xanh lá chủ đạo */
+  color: #ffffff;             /* Chữ màu trắng nổi bật */
+  border: none;               /* Khử viền mặc định */
+  border-radius: var(--radius-btn); /* Bo tròn góc đồng bộ theo biến hệ thống */
+  padding: 14px 0;            /* Độ dày nút vừa vặn dễ bấm bằng ngón tay */
+  font-size: 16px;            /* Chữ to, rõ ràng */
+  font-weight: 600;           /* Chữ hơi đậm để tăng độ nhấn */
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;  /* Tạo hiệu ứng mượt mà khi tương tác */
+  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.15); /* Đổ bóng mờ màu xanh nhẹ cho cao cấp */
+}
+
+/* Hiệu ứng khi di chuột vào (Dành cho máy tính) hoặc khi nhấn đè nhẹ (Dành cho điện thoại) */
+.submit-btn:hover {
+  background-color: #219653;  /* Màu xanh lá đậm hơn một chút khi hover */
+  box-shadow: 0 6px 16px rgba(39, 174, 96, 0.25); /* Bóng đổ đậm hơn khi nhấn */
+  transform: translateY(-1px); /* Nút nhấc nhẹ lên tạo cảm giác nổi */
+}
+
+/* Hiệu ứng phản hồi khi bấm trực tiếp (Active) */
+.submit-btn:active {
+  transform: translateY(1px);  /* Nút lún xuống nhẹ tạo cảm giác cơ học vật lý */
+  box-shadow: 0 2px 6px rgba(39, 174, 96, 0.15);
+}
+
+/* Định vị kích thước icon máy bay giấy nhỏ gọn lọt lòng */
+.submit-btn i {
+  font-size: 15px;
+}
