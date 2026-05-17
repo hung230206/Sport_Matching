@@ -1,12 +1,21 @@
-export default function Header()
-  {
-    return (
-      <header className='navbar'>
-        <div className='logo'></div>
-        <div className='auth-buttons'>
-          <button className='btn-login'>Đăng nhập</button>
-          <button className='btn-register'>Đăng kí</button>
+import { useState } from 'react';
+import './Header.css';
+
+const Header = () => {
+  return (
+    <header> 
+      <div className="header-container">
+        <div className="header-logo">
+          <div className="logo-icon">H</div>
+          <span className="brand-name">Sports Matching</span>
         </div>
-      </header>
-    )
-  }
+
+        <div className="header-auth">
+          <button className="btn-auth btn-login">Đăng nhập</button>
+          <button className="btn-auth btn-register">Đăng ký</button>
+        </div>
+      </div>
+    </header>
+  );
+};
+export default Header;
