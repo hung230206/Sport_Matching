@@ -1,0 +1,123 @@
+.post-card {
+    display: flex;
+    flex-direction: column;
+
+
+    padding: 5px 5px;
+    position: relative;
+    /* border: 1px solid black; */
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    
+   
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+    
+    
+}
+.trich-lo {
+    color: white;
+}
+.post-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #374151;
+}
+.sport-tag {
+    border-radius: 10px;
+    color: #0d9467;
+    
+    background-color: #bbdcd17c;
+    max-width: 140px ;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px;
+    align-items: center;
+    align-self: center;
+   }
+
+.post-card-btn {
+    position: absolute;
+
+    right: 11px;
+    bottom: 11px;
+
+    color: white;
+    background-color: #0d9467;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 0;
+    padding: 7px 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(22, 163, 74, 0.3);
+
+   
+    
+
+}
+.requirements {
+    display: flex;
+    /* gap: 10px; */
+    align-content: center;
+    align-items: center;
+}
+.requirements-list {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.requirement-item {
+    font-size: 14px;
+    color: #10b981;
+    border: 1px solid #10b981;
+    border-radius: 5px;
+    font-weight: 600;
+    padding: 3px;
+}
+.basic-info {
+    display:flex;
+    justify-content: space-between;
+}
+.post-user-info {
+    /* position: absolute; */
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    right: 13px;
+    bottom: 220px;
+}
+.post-user-avt {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    overflow: hidden;   
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.avt-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-user-verified {
+    color: #10b981;
+    font-weight: 500;
+}
+.post-user-name {
+    font-weight: 600;
+}
+.post-user-content {
+    font-size: 14px;
+}
