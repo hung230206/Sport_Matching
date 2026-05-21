@@ -1,16 +1,6 @@
-* {
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-.btn {
-  background-color: hsl(160, 84%, 17%);
-  color: white;
-  border-radius: 5px;
-}
-.data-Value {
-  color: #10b981;
-  font-weight: bold;
-}
-
