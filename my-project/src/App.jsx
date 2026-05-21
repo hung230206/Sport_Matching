@@ -26,8 +26,9 @@ const AppContent = () => {
           {/* <Route path="/profile" element={<Profile />} /> */}
           <Route path="*" element={<h2 style={{textAlign: 'center', marginTop: '50px'}}>404 - Không tìm thấy trang</h2>} />
         </Routes>
-        <BottomNav />
+        
       </main>
+      <BottomNav />
     </>
   );
 };
