@@ -3,10 +3,11 @@ header {
     color: white;
     position: sticky;
     
+    
 }
 .header-container {
-    max-width: 390px;
-    margin: 0 auto;
+    /* max-width: 390px; */
+    margin: 0px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;

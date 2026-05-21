@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Header.css';
+import { Link } from 'react-router-dom';
 import LoginPopup from '../Components/LoginPopup'
 
 const Header = () => {
@@ -7,10 +8,13 @@ const Header = () => {
   return (
     <header> 
       <div className="header-container">
-        <div className="header-logo">
-          <div className="logo-icon">H</div>
-          <span className="brand-name">Sports Matching</span>
-        </div>
+        
+        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <div className="header-logo">
+            <div className="logo-icon">H</div>
+            <span className="brand-name">Sports Matching</span>
+          </div>
+        </Link>
 
         <div className="header-auth">
           <button className="btn-auth btn-login" 
