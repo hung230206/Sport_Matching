@@ -19,12 +19,27 @@ const PostCard = () => {
             contact: "12472374",
         };
         return (
+            
             <div className="post-card">
                 <div className="post-info">
-                    <div className="sport-tag"> <i
+                    <div className="basic-info">
+                        <div className="sport-tag"> <i
         className="fa-regular fa-futbol"
         style={{ color: "#0d9467" }}
     ></i> {postData.sport}</div>
+                        
+                        <div className="post-user-info">
+                    <div className="post-user-avt"><img className="avt-img" src={postData.host.avatar} alt="avatar" /></div>
+                    <div className="post-user-content">
+                        <div className="post-user-name">{postData.host.name}</div>
+                        <div className="post-user-verified">
+                            {postData.host.verified && "Đã xác thực"}
+                            </div>
+                    </div>
+                </div>
+
+                    </div>
+                    
                     <div className="spots-left"><i className="fa-solid fa-user-group"></i> Số lượng còn lại: {postData.spotsLeft}</div>
                     <div className="date"><i className="fa-regular fa-calendar"></i> Ngày đá: <span className="data-Value"> {postData.date}</span></div>
                     <div className="time"><i className="fa-regular fa-clock"></i> Thời gian: <span className="data-Value">{postData.time }</span> </div>
@@ -42,15 +57,7 @@ const PostCard = () => {
                     <div className="contact"><i className="fa-solid fa-phone"></i> Liên hệ: <span className="data-Value">{postData.contact}</span></div>
                 </div>
                 <button className="post-card-btn">Tham gia</button>
-                <div className="post-user-info">
-                    <div className="post-user-avt"><img className="avt-img" src={postData.host.avatar} alt="avatar" /></div>
-                    <div className="post-user-content">
-                        <div className="post-user-name">{postData.host.name}</div>
-                        <div className="post-user-verified">
-                            {postData.host.verified && "Đã xác thực"}
-                            </div>
-                    </div>
-                </div>
+                
 
             </div>
         );
