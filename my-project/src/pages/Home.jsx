@@ -9,6 +9,7 @@ const Home = () => {
         <div className="app-container">
             <Header />
             <main className="main-content">
+                
                 <h1 className="page-title">
                     
                     Bài đăng
