@@ -21,6 +21,14 @@ const BottomNav = () => {
                 <span>Tạo bài đăng</span>
             </div>
             </Link>
+            <Link to="/notification" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div className="nav-item center">
+                <div className="add-button">
+                    <i className="fa-regular fa-bell"></i>
+                </div>
+                <span>Thông báo</span>
+            </div>
+            </Link>
             <Link to="/proflie" style={{ textDecoration: 'none', color: 'inherit' }}>
 
             <div className="nav-item">
