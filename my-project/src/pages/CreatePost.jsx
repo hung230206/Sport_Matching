@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import './CreatePost.css';
 
 // Import các component con vừa tách
-import PitchTypeSection from '../Components/PitchTypeSection';
-import TimePickerSection from '../Components/TimePickerSection';
-import LocationSection from '../Components/LocationSection';
-import RequirementsSection from '../Components/RequirementsSection';
+import PitchTypeSection from '../components/PitchTypeSection';
+import TimePickerSection from '../components/TimePickerSection';
+import LocationSection from '../components/LocationSection';
+import RequirementsSection from '../components/RequirementsSection';
 
 const CreatePost = () => {
     const [selectedPitch, setSelectedPitch] = useState(5);
@@ -19,7 +19,7 @@ const CreatePost = () => {
     const [gender, setGender] = useState('Nam'); 
     const [phoneNumber, setPhoneNumber] = useState('');
 
-    const handleIncrement = () => setPlayerCount(prev => prev === '' ? 1 : Number(prev) + 1);
+    const handleIncrement = () => setCount(prev => prev === '' ? 1 : Number(prev) + 1);
     const handleDecrement = () => playerCount > 0 && setPlayerCount(prev => Number(prev) - 1);
 
     return (
@@ -60,12 +60,8 @@ const CreatePost = () => {
                         value={playerCount} min="0"
                         onChange={(e) => setPlayerCount(e.target.value === '' ? '' : Number(e.target.value))}
                     />
-                    <button 
-                    type="button" 
-                    className="stepper-btn" 
-                    onClick={() => setPlayerCount(prev => (prev === '' ? 1 : Number(prev) + 1))}
-                    >
-                    <i className="fa-solid fa-plus"></i>
+                    <button type="button" className="stepper-btn" onClick={handleIncrement}>
+                        <i className="fa-solid fa-plus"></i>
                     </button>
                 </div>
             </div>

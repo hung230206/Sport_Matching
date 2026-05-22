@@ -43,3 +43,9 @@ body {
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
 }
+.app-container{
+  max-width: 390px;
+  margin: 0 auto;
+  background: white;
+  min-height: 100vh;
+}

@@ -3,3 +3,59 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Nền ngoài */
+body{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #2f2f2f;
+}
+
+/* Khung ngoài */
+.app-wrapper{
+  background: #2f2f2f;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}
+
+/* Khung app */
+.app-container{
+  width: 390px;
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+/* QUAN TRỌNG NHẤT */
+/* Xóa mọi chiều cao tối thiểu do Vite tạo sẵn */
+#root{
+  display: block;
+  min-height: 0 !important;
+  height: auto !important;
+}*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Nền ngoài */
+body{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #2f2f2f;
+}
+
+/* Khung ngoài */
+.app-wrapper{
+  background: #2f2f2f;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}
+
+/* Khung app */
+.app-container{
+  width: 390px;
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+}
