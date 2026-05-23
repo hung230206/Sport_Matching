@@ -129,7 +129,7 @@
   font-size: 12px;
 }
 
-.location{
+ .location{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,7 +140,7 @@
   margin-top: 5px;
 
   font-size: 11px;
-}
+} 
 
 .intro{
   text-align: center;

@@ -29,7 +29,7 @@ const BottomNav = () => {
                 <span>Thông báo</span>
             </div>
             </Link>
-            <Link to="/proflie" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link to="/profile" style={{ textDecoration: 'none', color: 'inherit' }}>
 
             <div className="nav-item">
                 <i className="fa-regular fa-user"></i>
