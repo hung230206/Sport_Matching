@@ -84,6 +84,7 @@
 .basic-info {
     display:flex;
     justify-content: space-between;
+    gap: 50px;
 }
 .post-user-info {
     /* position: absolute; */
