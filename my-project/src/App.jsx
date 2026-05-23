@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import CreatePost from './pages/CreatePost';
 import './App.css';
 import './Components/BottomNav'
+import Profile from './pages/Profile'
 import BottomNav from './Components/BottomNav';
 
 const AppContent = () => {
