@@ -40,10 +40,10 @@ const PostCard = () => {
 
                     </div>
                     
-                    <div className="spots-left"><i className="fa-solid fa-user-group"></i> Số lượng còn lại: {postData.spotsLeft}</div>
+                    <div className="spots-left"><i className="fa-solid fa-user-group"></i> Số lượng còn lại: <span className="data-Value"> {postData.spotsLeft}</span></div>
                     <div className="date"><i className="fa-regular fa-calendar"></i> Ngày đá: <span className="data-Value"> {postData.date}</span></div>
                     <div className="time"><i className="fa-regular fa-clock"></i> Thời gian: <span className="data-Value">{postData.time }</span> </div>
-                    <div className="location"><i className="fa-solid fa-location-dot"></i> Địa điểm: <span className="data-Value">{postData.location}</span></div>
+                    <div className="location-info"><i className="fa-solid fa-location-dot"></i> Địa điểm: <span className="data-Value">{postData.location}</span></div>
                     <div className="requirements"><i class="fa-solid fa-user"></i> <p className="trich-lo">.</p>
                         <div className="requirements-list">
                             <span> Yêu cầu: </span>
