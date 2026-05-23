@@ -2,7 +2,7 @@
 .create-post-container {
   max-width: 390px; /* Lưu ý: Đã sửa từ 958px về 480px để chuẩn giao diện di động (mobile view) */
   margin: 0 auto;
-  background-color: var(--bg-app); /* Sài var màu nền app xám nhẹ */
+  background-color: var(--bg-app); 
   min-height: 100vh;
   padding: 10px 15px;
 }
@@ -12,6 +12,7 @@
   display: flex;
   align-items: flex-start; /* Để nút Back nằm ngang hàng với dòng tiêu đề đầu tiên */
   padding: 15px 0 20px 0;
+  background-color: white;
 }
 
 .back-btn {

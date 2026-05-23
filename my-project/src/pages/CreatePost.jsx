@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import './CreatePost.css';
 
+
 // Import các component con vừa tách
-import PitchTypeSection from '../components/PitchTypeSection';
-import TimePickerSection from '../components/TimePickerSection';
-import LocationSection from '../components/LocationSection';
-import RequirementsSection from '../components/RequirementsSection';
+import PitchTypeSection from '../Components/PitchTypeSection';
+import TimePickerSection from '../Components/TimePickerSection';
+import LocationSection from '../Components/LocationSection';
+import RequirementsSection from '../Components/RequirementsSection';
+import BottomNav from '../Components/BottomNav';
 
 const CreatePost = () => {
     const [selectedPitch, setSelectedPitch] = useState(5);
@@ -23,7 +25,9 @@ const CreatePost = () => {
     const handleDecrement = () => playerCount > 0 && setPlayerCount(prev => Number(prev) - 1);
 
     return (
+        
         <div className="create-post-container">
+             
             {/* --- PHẦN 1: HEADER --- */}
             <header className="header-nav">
                 <button type="button" className="back-btn" onClick={() => window.history.back()}>
@@ -99,8 +103,12 @@ const CreatePost = () => {
                     <span>Đăng bài</span>
                 </button>
             </div>
+            <div style={{ height: '100px', width: '100%' }}></div>
+            
         </div>
+       
     );
+   
 };
 
 export default CreatePost;
