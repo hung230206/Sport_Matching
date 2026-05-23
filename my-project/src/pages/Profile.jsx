@@ -1,15 +1,4 @@
-import "./Profile.css";
-import {
-  FiArrowLeft,
-  FiMapPin,
-  FiUser,
-  FiTarget,
-  FiBarChart2,
-  FiShield,
-  FiShare2,
-  FiEdit2,
-} from "react-icons/fi";
-import { FaVenusMars } from "react-icons/fa";
+import './Profile.css';
 
 function Profile() {
   const user = {
@@ -27,12 +16,13 @@ function Profile() {
       {/* HEADER */}
       <div className="profile-banner">
         <button className="icon-btn left">
-          <FiArrowLeft />
+          <i className="fa-solid fa-arrow-left"></i>
         </button>
       </div>
 
       {/* CARD */}
       <div className="profile-card">
+
         {/* AVATAR */}
         <div className="avatar-wrapper">
           <img
@@ -54,7 +44,7 @@ function Profile() {
 
         {/* LOCATION */}
         <div className="location">
-          <FiMapPin />
+          <i className="fa-solid fa-location-dot"></i>
           <span>{user.location}</span>
         </div>
 
@@ -70,7 +60,7 @@ function Profile() {
 
           <div className="info-item">
             <div className="left-info">
-              <FiUser />
+              <i className="fa-regular fa-user"></i>
               <span>Tuổi</span>
             </div>
             <p>{user.age}</p>
@@ -78,7 +68,7 @@ function Profile() {
 
           <div className="info-item">
             <div className="left-info">
-              <FaVenusMars />
+              <i className="fa-solid fa-venus-mars"></i>
               <span>Giới tính</span>
             </div>
             <p>{user.gender}</p>
@@ -86,7 +76,7 @@ function Profile() {
 
           <div className="info-item">
             <div className="left-info">
-              <FiBarChart2 />
+              <i className="fa-solid fa-chart-column"></i>
               <span>Chiều cao</span>
             </div>
             <p>{user.height}</p>
@@ -94,7 +84,7 @@ function Profile() {
 
           <div className="info-item">
             <div className="left-info">
-              <FiTarget />
+              <i className="fa-solid fa-bullseye"></i>
               <span>Vị trí sở trường</span>
             </div>
             <p>{user.position}</p>
@@ -102,7 +92,7 @@ function Profile() {
 
           <div className="info-item">
             <div className="left-info">
-              <FiBarChart2 />
+              <i className="fa-solid fa-signal"></i>
               <span>Trình độ</span>
             </div>
             <p>{user.level}</p>
@@ -122,7 +112,7 @@ function Profile() {
           <div className="rating-card">
             <h4>Độ uy tín</h4>
             <div className="score green">
-              <FiShield />
+              <i className="fa-solid fa-shield-halved"></i>
               4.8
             </div>
             <p>Rất đáng tin cậy</p>
@@ -139,12 +129,12 @@ function Profile() {
 
         {/* BUTTON */}
         <button className="edit-btn">
-          <FiEdit2 />
+          <i className="fa-regular fa-pen-to-square"></i>
           Chỉnh sửa hồ sơ
         </button>
 
         <button className="share-btn">
-          <FiShare2 />
+          <i className="fa-solid fa-share-nodes"></i>
           Chia sẻ hồ sơ
         </button>
       </div>
@@ -152,4 +142,4 @@ function Profile() {
   );
 }
 
-export default Profile; 
+export default Profile;
