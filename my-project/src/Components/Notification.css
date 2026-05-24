@@ -1,0 +1,133 @@
+.notification-container {
+  padding: var(--spacing-lg);
+  background: var(--bg-app);
+  min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: var(--spacing-lg);
+}
+
+.notification-header h2 {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+
+  color: var(--text-main);
+}
+
+.notification-header button {
+  border: none;
+  background: transparent;
+
+  color: var(--primary-color);
+
+  font-size: var(--fs-sub);
+  font-weight: var(--fw-semibold);
+
+  cursor: pointer;
+}
+
+/* ================= LIST ================= */
+
+.notification-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--spacing-md);
+}
+
+/* ================= CARD ================= */
+
+.notification-card {
+  background: var(--bg-card);
+
+  border-radius: var(--radius-card);
+
+  border: 1px solid var(--border-color);
+
+  padding: var(--spacing-md);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: var(--shadow-light);
+
+  transition: var(--transition-main);
+}
+
+.notification-card.unread {
+  border-left: 5px solid var(--primary-color);
+  background: var(--primary-light);
+}
+
+.notification-card:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= LEFT ================= */
+
+.left {
+  display: flex;
+  align-items: center;
+
+  gap: var(--spacing-md);
+}
+
+/* ================= AVATAR ================= */
+
+.avatar {
+  width: 58px;
+  height: 58px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+/* ================= CONTENT ================= */
+
+.notification-content {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.notification-content p {
+  font-size: var(--fs-body);
+
+  color: var(--text-body);
+
+  line-height: 1.4;
+}
+
+.notification-content strong {
+  color: var(--text-main);
+  font-weight: var(--fw-bold);
+}
+
+.notification-content span {
+  font-size: var(--fs-sub);
+
+  color: var(--text-muted);
+}
+
+/* ================= DOT ================= */
+
+.dot {
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  background: var(--primary-color);
+
+  flex-shrink: 0;
+}
