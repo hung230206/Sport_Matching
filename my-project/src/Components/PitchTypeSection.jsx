@@ -4,7 +4,7 @@ const PitchTypeSection = ({ selectedPitch, setSelectedPitch }) => {
     return (
         <div className="section-card">
             <h2 className="text-h2 section-title">
-                <i className="fa-regular fa-file-lines icon-green"></i>
+                <i className="fa-solid fa-soccer-ball icon-green"></i>
                 Loại sân
             </h2>
             <div className="pitch-options">

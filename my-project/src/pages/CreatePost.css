@@ -223,9 +223,7 @@
   -webkit-appearance: none;
   margin: 0;
 }
-.stepper-input {
-  -moz-appearance: textfield; /* Cho trình duyệt Firefox */
-}
+
 
 /* Placeholder chữ màu xám nhạt như mẫu */
 .stepper-input::placeholder {
